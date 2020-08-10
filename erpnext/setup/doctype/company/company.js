@@ -34,6 +34,10 @@ frappe.ui.form.on("Company", {
 		frm.set_query("default_buying_terms", function() {
 			return { filters: { buying: 1 } };
 		});
+
+		frm.set_query("default_in_transit_warehouse", function() {
+			return { filters: { warehouse_type: 'Transit' } };
+		});
 	},
 
 	company_name: function(frm) {
